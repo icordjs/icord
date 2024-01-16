@@ -13,7 +13,7 @@
 
 ## About
 
-- A framework for developing bots based using discord.js.
+- A library for logging your projects to a new level!
 
 # 📦 Installation
 
