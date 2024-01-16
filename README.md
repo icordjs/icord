@@ -13,7 +13,7 @@
 
 ## About
 
-This repository includes a library for working with the Discord API, along with basic files and other important information
+- A framework for developing bots based using discord.js.
 
 ## Packages
 
