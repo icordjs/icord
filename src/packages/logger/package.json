@@ -1,0 +1,12 @@
+{
+    "name": "@icord/logger",
+    "description": "A framework for developing bots based using discord.js.",
+    "version": "0.0.1",
+    "private": false,
+    "contributors": [
+        "mind (https://github.com/whymind)",
+        "nite (https://github.com/nxtxe)"
+    ],
+    "author": "icord",
+    "license": "ISC"
+}

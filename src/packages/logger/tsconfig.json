@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "ESNext",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "noUncheckedIndexedAccess": true,
+        "emitDecoratorMetadata": false,
+        "experimentalDecorators": true,
+        "declaration": true,
+        "importHelpers": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "skipLibCheck": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test",
+        "examples",
+        "docs",
+        "packages",
+        "scripts"
+    ]
+}
