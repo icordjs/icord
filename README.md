@@ -17,7 +17,8 @@
 
 ## Packages
 
-- `icord` 
+- `icord` ([source]()) - A powerful Node.js module for interacting with the Discord API
+- `@icord/logger` ([source]()) - A powerful Node.js module for interacting with the Discord API
 
 ## Help
 
