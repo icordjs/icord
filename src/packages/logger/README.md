@@ -45,4 +45,4 @@ logger.debug("Debug");
 # ☎️ Contact
 
 -   Discord: https://discord.gg/4Jh6xvEdRu
--   Documentation: https://www.npmjs.com/package/@icord/logger)https://www.npmjs.com/package/@icord/logger
+-   Documentation: https://www.npmjs.com/package/@icord/logger
