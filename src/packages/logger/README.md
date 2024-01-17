@@ -25,7 +25,7 @@ npm install @icord/logger
 ```js
 import { Logger } from "@icord/logger";
 
-const logger = new Logger("ClassName");
+const logger = new Logger("ClassName"); // options: { delay: true, writeStreamType: "stderr", timestamp: "en-US" }
 
 logger.log("Log");
 logger.error("Error");
@@ -37,7 +37,7 @@ logger.debug("Debug");
 ```
 
 # 📸 Examples
-![output](https://github.com/icordjs/icord/blob/main/src/packages/logger/example/example.png)
+![](https://github.com/icordjs/icord/blob/main/src/packages/logger/example/example.png) 
 
 # 🔗 Options
 - **timestamp** — Is not a declaration of a custom *Timestamp* type, which can take only three values: `"en-US"`, `"de-DE"` or `"ru-RU"`.
