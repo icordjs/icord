@@ -9,20 +9,19 @@
 		<a href="https://www.npmjs.com/package/icord"><img src="https://img.shields.io/npm/v/icord.svg?maxAge=100" alt="npm version" /></a>
 		<a href="https://www.npmjs.com/package/icord"><img src="https://img.shields.io/npm/dt/icord.svg?maxAge=100" alt="npm downloads" /></a>
 	</p>
+  <p align="center">
+    <b> A framework for developing bots based using discord.js. </b>
+  </p>
 </div>
 
-## About
-
-- A framework for developing bots based using discord.js.
-
 ## Packages
-
-- `icord` ([source]()) - A powerful Node.js module for interacting with the Discord API
-- `@icord/logger` ([source]()) - A powerful Node.js module for interacting with the Discord API
+- [icord](./packages/icord#readme) - A powerful Node.js module for interacting with the Discord API
+- [@icord/logger](./packages/logger#readme) - A library for logging your projects to a new level
 
 ## Help
 
-If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle nudge in the right direction, please join our [Discord server][discord].
+If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle nudge in the right direction.
+- [Discord server](https://discord.gg/qS9wGazSgp)
 
 [website]: https://discord.js.org
 [npm]: https://www.npmjs.com/package/discord.js
