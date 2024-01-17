@@ -37,7 +37,7 @@ logger.debug("Debug");
 ```
 
 # 📸 Example
-![](https://github.com/icordjs/icord/blob/main/src/packages/logger/example/example.png) 
+![](https://github.com/icordjs/icord/blob/main/packages/logger/example/example.png) 
 
 # 🔗 Options
 - **timestamp** — Is not a declaration of a custom *Timestamp* type, which can take only three values: `"en-US"`, `"de-DE"` or `"ru-RU"`.
@@ -46,4 +46,4 @@ logger.debug("Debug");
 
 # ☎️ Contact
 
--   Discord: https://discord.gg/4Jh6xvEdRu
+- [Discord server](https://discord.gg/qS9wGazSgp)
