@@ -9,11 +9,10 @@
 		<a href="https://www.npmjs.com/package/@icord/logger"><img src="https://img.shields.io/npm/v/@icord/logger.svg?maxAge=100" alt="npm version" /></a>
 		<a href="https://www.npmjs.com/package/@icord/logger"><img src="https://img.shields.io/npm/dt/@icord/logger.svg?maxAge=100" alt="npm downloads" /></a>
 	</p>
+	 <p align="center">
+    <b> A library for logging your projects to a new level! </b>
+  </p>
 </div>
-
-## About
-
-- A library for logging your projects to a new level!
 
 # 📦 Installation
 
@@ -21,7 +20,7 @@
 npm install @icord/logger
 ```
 
-# 🚀 Usage
+# 📖 Usage
 
 ```js
 import { Logger } from "@icord/logger";
@@ -37,9 +36,14 @@ logger.event("Event");
 logger.debug("Debug");
 ```
 
+# 📸 Examples
 ![output](https://github.com/icordjs/icord/blob/main/src/packages/logger/example/example.png)
+
+# 🔗 Options
+- **timestamp** — Is not a declaration of a custom *Timestamp* type, which can take only three values: `"en-US"`, `"de-DE"` or `"ru-RU"`.
+- **writeStreamType** — Is an optional *writeStreamType* field that can take only two values: `"stdout"` or `"stderr"`.
+- **delay** — Is an optional *delay* field that can take `boolean` values.
 
 # ☎️ Contact
 
 -   Discord: https://discord.gg/4Jh6xvEdRu
--   Documentation: https://www.npmjs.com/package/@icord/logger
