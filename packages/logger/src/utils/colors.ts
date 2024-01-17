@@ -1,4 +1,4 @@
-import { ColorMap, ColorTextFn, LogLevel } from "../types/index";
+import { ColorMap, ColorTextFn, LogLevel } from "../index";
 
 const color = {
     bold: (text: string) => `\x1B[1m${text}\x1B[0m`,

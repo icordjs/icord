@@ -36,7 +36,7 @@ logger.event("Event");
 logger.debug("Debug");
 ```
 
-# 📸 Examples
+# 📸 Example
 ![](https://github.com/icordjs/icord/blob/main/src/packages/logger/example/example.png) 
 
 # 🔗 Options

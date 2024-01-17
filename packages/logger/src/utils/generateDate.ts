@@ -1,4 +1,4 @@
-import { Timestamp } from "../types/index";
+import { Timestamp } from "../index";
 
 function generateDate(timestamp: Timestamp = "ru-RU"): string {
     const options: Intl.DateTimeFormatOptions = {

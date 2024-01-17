@@ -1,4 +1,4 @@
-import { ConsoleLoggerOptions, LogLevel } from "../types/index";
+import { ConsoleLoggerOptions, LogLevel } from "../index";
 import { generateDate, color, getColorByLogLevel } from "../utils/index";
 
 class LoggerFormatter {

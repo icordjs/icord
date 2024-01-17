@@ -1,11 +1,12 @@
 {
     "name": "@icord/logger",
     "description": "A library for logging your projects to a new level!",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "private": false,
     "keywords": [
         "node",
         "log",
+        "console",
         "logger",
         "typescript",
         "discord",

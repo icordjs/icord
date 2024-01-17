@@ -1,4 +1,4 @@
-import { ConsoleLoggerOptions, LogLevel, LoggerService } from "../types/index";
+import { ConsoleLoggerOptions, LogLevel, LoggerService } from "../index";
 import { LoggerFormatter } from "./LoggerFormatter";
 
 export class Logger implements LoggerService {

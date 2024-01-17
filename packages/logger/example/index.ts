@@ -1,4 +1,4 @@
-import { Logger } from "@icord/logger";
+import { Logger } from "..";
 
 const logger = new Logger("ClassName");
 
