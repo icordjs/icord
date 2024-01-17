@@ -1,8 +1,8 @@
 # Исключение файлов и папок
 node_modules/
-dist/
 scr/
 *.log
+example
 
 # Исключение скрытых файлов и папок
 .*
@@ -26,3 +26,4 @@ __tests__/
 .prettierignore
 .prettierrc
 tsconfig.json
+.env

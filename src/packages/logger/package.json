@@ -1,12 +1,53 @@
 {
     "name": "@icord/logger",
-    "description": "A framework for developing bots based using discord.js.",
-    "version": "0.0.1",
+    "description": "A library for logging your projects to a new level!",
+    "version": "1.0.3",
     "private": false,
+    "keywords": [
+        "node",
+        "log",
+        "logger",
+        "typescript",
+        "discord",
+        "discordjs",
+        "icord"
+    ],
+    "bugs": {
+        "url": "https://github.com/icordjs/icord/issues"
+    },
+    "homepage": "https://github.com/icordjs/icord/blob/main/src/packages/logger/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/icordjs/icord"
+    },
+    "license": "ISC",
     "contributors": [
         "mind (https://github.com/whymind)",
         "nite (https://github.com/nxtxe)"
     ],
-    "author": "icord",
-    "license": "ISC"
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        }
+    },
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "CHANGELOG.md",
+        "LICENSE",
+        "README.md",
+        "SECURITY.md",
+        "package.json"
+    ],
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.4",
+        "typescript": "^5.3.3"
+    },
+    "engines": {
+        "node": ">=16.6.0"
+    }
 }

@@ -1,6 +1,6 @@
-import { ConsoleLoggerOptions } from "./types";
+import { Timestamp } from "../types/index";
 
-export function generateDate(locales: ConsoleLoggerOptions): string {
+function generateDate(timestamp: Timestamp = "ru-RU"): string {
     const options: Intl.DateTimeFormatOptions = {
         year: "numeric",
         hour: "numeric",
@@ -10,5 +10,7 @@ export function generateDate(locales: ConsoleLoggerOptions): string {
         month: "2-digit"
     };
 
-    return new Date().toLocaleString(locales.timestamp, options);
+    return new Date().toLocaleString(timestamp, options);
 };
+
+export { generateDate };

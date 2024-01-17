@@ -1,14 +1,15 @@
-import { color, getColorByLogLevel } from "./colors";
-import { generateDate } from "./generateDate";
-import { ConsoleLoggerOptions, LogLevel, LoggerService } from "./types";
+import { ConsoleLoggerOptions, LogLevel, LoggerService } from "../types/index";
+import { LoggerFormatter } from "./LoggerFormatter";
 
 export class Logger implements LoggerService {
-    protected className?: string;
+    protected className: string;
     protected options: ConsoleLoggerOptions;
+    private formatter: LoggerFormatter;
 
     constructor(className?: string, options?: ConsoleLoggerOptions) {
-        this.className = className;
+        this.className = className || "";
         this.options = options || {};
+        this.formatter = new LoggerFormatter(options);
     };
 
     public log(message: string): void {
@@ -43,38 +44,13 @@ export class Logger implements LoggerService {
         return !this.options.logLevels || this.options.logLevels.includes(level);
     };
 
-    protected formatPid(pid: number): string {
-        return `[Icord] ${pid} - `;
-    };
-
-    protected colorize(message: string, logLevel: LogLevel): string {
-        const colorFn = getColorByLogLevel(logLevel);
-        return colorFn(message);
-    };
-
-    protected nameClass(className?: string): string {
-        return className ? color.cyanBright(` [${className}] `) : " ";
-    };
-
-    protected dateMessage(): string {
-        return generateDate(this.options);
-    };
-
     protected printMessages(logLevel: LogLevel = "log", message: string): void {
         if (typeof message !== "string") {
             throw new Error("The message must be a string.");
-        }
+        };
 
-        process.stderr.write(this.formatMessage(message, logLevel));
-    }
-
-    protected formatMessage(message: string, logLevel: LogLevel): string {
-        const pidMessage = this.colorize(this.formatPid(process.pid), logLevel);
-        const formattedLogLevel = this.colorize(logLevel.toUpperCase().padStart(10, " "), logLevel);
-        const dateMessage = this.dateMessage();
-        const nameMessage = this.nameClass();
-
-        return `${pidMessage}${dateMessage}${formattedLogLevel}${nameMessage}${message}\n`;
+        const writeStreamType = process[this.options.writeStreamType || "stdout"];
+        writeStreamType.write(this.formatter.formatMessage(message, logLevel, process.pid, this.className));
     }
 }
 
