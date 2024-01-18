@@ -1,5 +1,14 @@
 import { ConsoleLoggerOptions, LogLevel } from "../index";
-import { generateDate, color, getColorByLogLevel } from "../utils/index";
+import { color, getColor } from "../utils/index";
+
+const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    day: "2-digit",
+    month: "2-digit"
+};
 
 export class Formatter {
     /**
@@ -17,8 +26,8 @@ export class Formatter {
      * @param {ConsoleLoggerOptions} [options] - The options for the formatter.
      */
     constructor(options?: ConsoleLoggerOptions) {
-        this.options = options || {};
-    };
+        this.options = options ?? {};
+    }
 
     /**
     * Formats the process ID.
@@ -27,8 +36,11 @@ export class Formatter {
     * @returns {string} The formatted process ID.
     */
     public formatPid(pid: number): string {
+        if (!Number.isInteger(pid)) {
+            throw new Error("Invalid PID: Must be an integer.");
+        }
         return `[Icord] ${pid} - `;
-    };
+    }
 
     /**
      * Colorizes a log message based on the log level.
@@ -38,9 +50,9 @@ export class Formatter {
      * @returns {string} The colorized log message.
      */
     public colorize(message: string, logLevel: LogLevel): string {
-        const colorFn = getColorByLogLevel(logLevel);
+        const colorFn = getColor(logLevel);
         return colorFn(message);
-    };
+    }
 
     /**
      * Names a class.
@@ -49,8 +61,8 @@ export class Formatter {
      * @returns {string} The named class.
      */
     public nameClass(className?: string): string {
-        return className ? color.cyanBright(` [${className}] `) : " ";
-    };
+        return className ? ` ${color.cyanBright(`[${className}]`)} ` : " ";
+    }
 
     /**
       * Generates the date message.
@@ -58,7 +70,7 @@ export class Formatter {
       * @returns {string} The generated date message.
       */
     public dateMessage(): string {
-        return generateDate(this.options.timestamp);
+        return new Date().toLocaleString(this.options.timestamp = "ru-RU", options);
     };
 
     /**
@@ -66,21 +78,11 @@ export class Formatter {
      *
      * @returns {string} The timestamp difference.
      */
-    protected updateAndGetTimestampDiff(): string {
-        const now: number = Date.now();
-        const timestampDiff: number = this.lastTimestampAt && this.options.delay ? now - this.lastTimestampAt : 0;
+    protected updateAndGetTimestampDiff(delay: boolean = true): string {
+        const now = Date.now();
+        const timestampDiff = this.lastTimestampAt && delay ? now - this.lastTimestampAt : 0;
         this.lastTimestampAt = now;
-        return timestampDiff > 0 ? this.formatTimestampDiff(timestampDiff) : "";
-    };
-
-    /**
-     * Formats the timestamp difference.
-     *
-     * @param {number} timestampDiff - The timestamp difference.
-     * @returns {string} The formatted timestamp difference.
-     */
-    protected formatTimestampDiff(timestampDiff: number) {
-        return color.yellow(` +${timestampDiff}ms`);
+        return timestampDiff > 0 ? ` ${color.yellow(`+${timestampDiff}ms`)}` : "";
     };
 
     /**
@@ -95,10 +97,10 @@ export class Formatter {
     public formatMessage(message: string, logLevel: LogLevel, pid: number, className?: string): string {
         const pidMessage = this.colorize(this.formatPid(pid), logLevel);
         const formattedLogLevel = this.colorize(logLevel.toUpperCase().padStart(10, " "), logLevel);
+        const timestampDiff = this.updateAndGetTimestampDiff(this.options.delay);
         const dateMessage = this.dateMessage();
         const nameMessage = this.nameClass(className);
-        const timestampDiff = this.updateAndGetTimestampDiff();
 
         return `${pidMessage}${dateMessage}${formattedLogLevel}${nameMessage}${message}${timestampDiff}\n`;
-    };
+    }
 };

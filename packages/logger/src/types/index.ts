@@ -1,8 +1,14 @@
-export type LogLevel = "log" | "error" | "warn" | "debug" | "verbose" | "event" | "success";
+export enum LogLevel {
+    Log = "log",
+    Success = "success",
+    Event = "event",
+    Debug = "debug",
+    Warn = "warn",
+    Error = "error",
+    Verbose = "verbose",
+}
 
 export type Timestamp = "en-US" | "de-DE" | "ru-RU";
-
-export type ColorMap = Partial<Record<LogLevel, ColorTextFn>>;
 
 export type ColorTextFn = (text: string) => string;
 

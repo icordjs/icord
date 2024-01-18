@@ -1,7 +1,7 @@
 {
     "name": "@icord/logger",
     "description": "A library for logging your projects to a new level!",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "private": false,
     "keywords": [
         "node",

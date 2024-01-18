@@ -1,5 +1,14 @@
 # @icord/logger
 
+## 1.0.7
+
+### Changes
+
+-  update Decorator IcordLogger
+-  update Logger
+-  update color
+-  update types
+
 ## 1.0.6
 
 ### Changes
