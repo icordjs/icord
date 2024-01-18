@@ -21,7 +21,7 @@ npm install @icord/logger
 ```
 
 # 📖 Usage
-
+> ### [Example 1](https://github.com/icordjs/icord/blob/main/packages/logger/example/example1.ts)
 ```js
 import { Logger } from "@icord/logger";
 
@@ -34,6 +34,45 @@ logger.success("Success");
 logger.verbose("Verbose");
 logger.event("Event");
 logger.debug("Debug");
+```
+
+> ### [Example 2](https://github.com/icordjs/icord/blob/main/packages/logger/example/emample2.ts)
+```js
+import { Logger } from "@icord/logger";
+
+class ExampleLogger {
+    private logger = new Logger(ExampleLogger.name, { delay: true, timestamp: "en-US" })
+
+    constructor() {
+        this.logger.log("Log");
+        this.logger.error("Error");
+        this.logger.warn("Warn");
+        this.logger.success("Success");
+        this.logger.verbose("Verbose");
+        this.logger.event("Event");
+        this.logger.debug("Debug");
+    }
+}
+```
+> ### [Example 3](https://github.com/icordjs/icord/blob/main/packages/logger/example/example3.ts)
+> - Also make sure that the `"experimentalDecorators": true` option is enabled in your TypeScript config file **tsconfig.json** to use decorators.
+```js
+import { IcordLogger, LoggerService } from "@icord/logger";
+
+class ExampleLogger {
+    @IcordLogger(ExampleLogger.name, { /* options here */ })
+    logger!: LoggerService;
+
+    constructor() {
+        this.logger.log("Log");
+        this.logger.error("Error");
+        this.logger.warn("Warn");
+        this.logger.success("Success");
+        this.logger.verbose("Verbose");
+        this.logger.event("Event");
+        this.logger.debug("Debug");
+    }
+}
 ```
 
 # 📸 Example 
