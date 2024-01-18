@@ -21,7 +21,7 @@
         "type": "git",
         "url": "https://github.com/icordjs/icord"
     },
-    "license": "ISC",
+    "license": "MIT",
     "contributors": [
         "mind (https://github.com/whymind)",
         "nite (https://github.com/nxtxe)"
