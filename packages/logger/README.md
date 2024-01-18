@@ -55,6 +55,7 @@ class ExampleLogger {
 }
 ```
 - Example 3
+- Also make sure that the `"experimentalDecorators": true` option is enabled in your TypeScript config file **tsconfig.json** to use decorators.
 ```js
 import { IcordLogger, LoggerService } from "@icord/logger";
 
