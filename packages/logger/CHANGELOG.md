@@ -1,5 +1,11 @@
 # @icord/logger
 
+## 1.0.6
+
+### Changes
+
+-  add IcordLogger 
+
 ## 1.0.5
 
 ### Changes
