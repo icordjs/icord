@@ -14,13 +14,13 @@
   </p>
 </div>
 
-# 📦 Installation
+# Installation
 
 ```bash
 npm install @icord/logger
 ```
 
-# 📖 Usage
+# Usage
 > ### [Example 1](https://github.com/icordjs/icord/blob/main/packages/logger/example/example1.ts)
 ```js
 import { Logger } from "@icord/logger";
@@ -75,16 +75,16 @@ class ExampleLogger {
 }
 ```
 
-# 📸 Example 
+# Example 
 - [Check example](https://github.com/icordjs/icord/tree/main/packages/logger/example)
 
 ![](https://github.com/icordjs/icord/blob/main/packages/logger/example/example.png) 
 
-# 🔗 Options
+# Options
 - **timestamp** — Is not a declaration of a custom *Timestamp* type, which can take only three values: `"en-US"`, `"de-DE"` or `"ru-RU"`.
 - **writeStreamType** — Is an optional *writeStreamType* field that can take only two values: `"stdout"` or `"stderr"`.
 - **delay** — Is an optional *delay* field that can take `boolean` values.
 
-# ☎️ Contact
+# Contact
 
 - [Discord server](https://discord.gg/qS9wGazSgp)
