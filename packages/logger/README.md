@@ -21,7 +21,7 @@ npm install @icord/logger
 ```
 
 # 📖 Usage
-> Example 1
+> ### [Example 1](https://github.com/icordjs/icord/blob/main/packages/logger/example/example1.ts)
 ```js
 import { Logger } from "@icord/logger";
 
@@ -36,7 +36,7 @@ logger.event("Event");
 logger.debug("Debug");
 ```
 
-> Example 2
+> ### [Example 2](https://github.com/icordjs/icord/blob/main/packages/logger/example/emample2.ts)
 ```js
 import { Logger } from "@icord/logger";
 
@@ -54,8 +54,8 @@ class ExampleLogger {
     }
 }
 ```
-> Example 3
-- Also make sure that the `"experimentalDecorators": true` option is enabled in your TypeScript config file **tsconfig.json** to use decorators.
+> ### [Example 3](https://github.com/icordjs/icord/blob/main/packages/logger/example/example3.ts)
+> - Also make sure that the `"experimentalDecorators": true` option is enabled in your TypeScript config file **tsconfig.json** to use decorators.
 ```js
 import { IcordLogger, LoggerService } from "@icord/logger";
 
