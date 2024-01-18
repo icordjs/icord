@@ -1,25 +1,20 @@
-# Исключение файлов и папок
 node_modules/
 scr/
 *.log
 example
 
-# Исключение скрытых файлов и папок
 .*
 !.npmignore
 
-# Исключение файлов конфигурации
 package-lock.json
 yarn.lock
 
-# Исключение файлов тестов
 test/
 tests/
 __tests__/
 *.test.js
 *.spec.js
 
-# Исключение файлов разработки
 .editorconfig
 .eslintignore
 .eslintrc
