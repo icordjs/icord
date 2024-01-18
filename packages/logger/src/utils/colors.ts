@@ -12,6 +12,11 @@ const color = {
 } as const;
 
 function getColorByLogLevel(level: LogLevel): ColorTextFn {
+    /**
+    * Get the color function based on the log level.
+    * @param {LogLevel} level - The log level.
+    * @returns {ColorTextFn} The color function.
+    */
     const colorMap: ColorMap = {
         log: color.blue,
         success: color.green,

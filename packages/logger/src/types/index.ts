@@ -1,4 +1,5 @@
 export type LogLevel = "log" | "error" | "warn" | "debug" | "verbose" | "event" | "success";
+
 export type Timestamp = "en-US" | "de-DE" | "ru-RU";
 
 export type ColorMap = Partial<Record<LogLevel, ColorTextFn>>;
@@ -13,11 +14,11 @@ export interface LoggerService {
     verbose(message: string): void;
     success(message: string): void;
     event(message: string): void;
-}
+};
 
 export interface ConsoleLoggerOptions {
     logLevels?: LogLevel[];
     timestamp?: Timestamp;
     delay?: boolean;
     writeStreamType?: "stdout" | "stderr";
-}
+};

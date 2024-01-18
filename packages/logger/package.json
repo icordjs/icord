@@ -16,7 +16,7 @@
     "bugs": {
         "url": "https://github.com/icordjs/icord/issues"
     },
-    "homepage": "https://github.com/icordjs/icord/blob/main/src/packages/logger/README.md",
+    "homepage": "https://github.com/icordjs/icord/blob/main/packages/logger/README.md",
     "repository": {
         "type": "git",
         "url": "https://github.com/icordjs/icord"
