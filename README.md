@@ -1,7 +1,7 @@
 <div align="center">
 	<br />
 	<p>
-		<a href="https://discord.js.org"><img src="https://github.com/icordjs/.github/blob/main/profile/data/logo.png" width="546" alt="icord" /></a>
+		<a href="https://discord.js.org"><img src="https://github.com/icordjs/.github/blob/main/profile/data/icord-logo.png" width="546" alt="icord" /></a>
 	</p>
 	<br />
 	<p>
