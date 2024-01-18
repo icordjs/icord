@@ -6,13 +6,13 @@ export type ColorMap = Partial<Record<LogLevel, ColorTextFn>>;
 export type ColorTextFn = (text: string) => string;
 
 export interface LoggerService {
-    log(message: string): any;
-    error(message: string): any;
-    warn(message: string): any;
-    debug(message: string): any;
-    verbose(message: string): any;
-    success(message: string): any;
-    event(message: string): any;
+    log(message: string): void;
+    error(message: string): void;
+    warn(message: string): void;
+    debug(message: string): void;
+    verbose(message: string): void;
+    success(message: string): void;
+    event(message: string): void;
 }
 
 export interface ConsoleLoggerOptions {
